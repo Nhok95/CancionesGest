@@ -1,0 +1,24 @@
+<h1>Editor de canciones</h1>
+<form>
+  <div class="form-group">
+    <label for="codigo">Código:</label>
+    <input disabled [(ngModel)]="editedCancion.codigo" type="number" class="form-control" id="codigo" placeholder="Enter código" name="cancion.codigo">
+  </div>
+  <div class="form-group">
+    <label for="titulo">Título:</label>
+    <input [(ngModel)]="editedCancion.titulo" type="text" class="form-control" id="titulo" placeholder="Enter título" name="cancion.titulo">
+  </div>
+  <div class="form-group">
+    <label for="autor">Autor:</label>
+    <input [(ngModel)]="editedCancion.autor" type="text" class="form-control" id="autor" placeholder="Enter autor" name="cancion.autor">
+  </div>
+  <div class="form-group form-check">
+    <input [(ngModel)]="editedCancion.explicita" class="form-check-input" type="checkbox" id="explicit" name="cancion.explicita"> 
+    <label for="explicit" class="form-check-label">Explicit.</label>
+  </div>
+  <div class="form-group">
+      <label for="date">Date:</label>
+      <input [(ngModel)]="editedCancion.release"  type="date" class="form-control" id="date" name="editedCancion.release">
+  </div>
+  <button (click)="update()" class="btn btn-primary"> Editar </button>
+</form>

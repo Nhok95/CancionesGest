@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+    <div class="table-responsive">
+        <table *ngIf="canciones" class="table">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Explicita</th>
+                    <th scope="col">Release</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tr *ngFor='let cancion of canciones'>
+                <th scope="row">{{cancion.codigo}}</th>
+                <td><p>{{cancion.titulo}}</p></td>
+                <td>{{cancion.autor}}</td>
+                <td class="redText">{{cancion.explicita | boolean }}</td> <!--lo que pide jordi-->
+                <td>{{cancion.release | date:'dd/MM/yyyy'}}</td>
+                <td><button (click)='navigateToEdit(cancion.codigo)' class="btn btn-warning" >Edit</button></td>
+                <td><button (click)='remove(cancion.codigo)'  class="btn btn-danger" >Remove</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+<h1>Da de alta una canción</h1>
+<form>
+  <div class="form-group">
+    <label for="codigo">Código:</label>
+    <input [(ngModel)]="cancion.codigo" type="number" class="form-control" id="codigo" placeholder="Enter código" name="cancion.codigo">
+  </div>
+  <div class="form-group">
+    <label for="titulo">Título:</label>
+    <input [(ngModel)]="cancion.titulo" type="text" class="form-control" id="titulo" placeholder="Enter título" name="cancion.titulo">
+  </div>
+  <div class="form-group">
+    <label for="autor">Autor:</label>
+    <input [(ngModel)]="cancion.autor" type="text" class="form-control" id="autor" placeholder="Enter autor" name="cancion.autor">
+  </div>
+  <div class="form-group form-check">
+    <input [(ngModel)]="cancion.explicita" class="form-check-input" type="checkbox" id="explicit" name="cancion.explicita"> 
+    <label for="explicit" class="form-check-label">Explicit.</label>
+  </div>
+  <div class="form-group">
+      <label for="date">Date:</label>
+      <input [(ngModel)]="cancion.release" type="date" class="form-control" id="date" name="cancion.release">
+  </div>
+  <button (click)="crear()" class="btn btn-primary"> Crear </button>
+</form>
